@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "module": "ESNext",
+    "allowJs": false,
+    "checkJs": false,
+    "target": "ESNext",
+    "moduleResolution": "NodeNext"
+  },
+  "include": [
+    "src/"
+  ],
+  "exclude": [
+    "node_modules/*"
+  ]
+}

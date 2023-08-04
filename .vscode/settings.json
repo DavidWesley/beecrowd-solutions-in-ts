@@ -1,0 +1,10 @@
+{
+	"cSpell.enableFiletypes": [
+		"!json",
+		"js"
+	],
+	"cSpell.words": [
+		"Beecrowd"
+	],
+	"typescript.tsdk": "node_modules/typescript/lib",
+}
