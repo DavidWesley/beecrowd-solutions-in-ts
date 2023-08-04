@@ -1,7 +1,7 @@
 {
-  "name": "config-template",
+  "name": "beecrowd-solutions-in-ts",
   "version": "0.0.1",
-  "description": "Inicializar um repositório com todas as configurações necessárias",
+  "description": "Question codes approved in URI Online Judge (or Beecrowd) site using <b>only modern TS</b> syntax (5.1+)",
   "private": "true",
   "type": "module",
   "scripts": {
@@ -16,7 +16,25 @@
     "email": "contato.dwesley@outlook.com",
     "url": "https://github.com/DavidWesley"
   },
-  "license": "ISC",
+  "keywords": [
+    "typescript",
+    "uri-online-judge",
+    "beecrowd",
+    "beecrowd-solutions",
+    "beecrowd-solutions-in-ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidWesley/beecrowd-solutions-in-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DavidWesley/beecrowd-solutions-in-ts/issues"
+  },
+  "homepage": "https://github.com/DavidWesley/beecrowd-solutions-in-ts#readme",
+  "license": "GPL-3.0",
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
