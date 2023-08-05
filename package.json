@@ -1,7 +1,7 @@
 {
   "name": "beecrowd-solutions-in-ts",
   "version": "0.0.1",
-  "description": "Question codes approved in URI Online Judge (or Beecrowd) site using <b>only modern TS</b> syntax (5.1+)",
+  "description": "Question codes approved in URI Online Judge (or Beecrowd) site using only modern TS syntax (5.1+)",
   "private": "true",
   "type": "module",
   "scripts": {
