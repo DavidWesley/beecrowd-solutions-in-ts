@@ -8,15 +8,22 @@ const input = readFileSync(stdin.fd, { encoding: "ascii" })
   .map((value) => Number.parseInt(value, 10))
   .at(0) as number
 
-function getFewestNotesSequence(cash: number, banknotes?: Array<number>) {
+type NoteType = "note" | "coin"
+interface NoteDetails {
+  note: number
+  quantity: number
+  type: NoteType
+}
+
+function getFewestNotesSequence(cash: number, banknotes?: Array<number>): Readonly<{ info: Array<NoteDetails> }> {
   const DEFAULT_BANKNOTES = [200, 100, 50, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1, 0.05, 0.01]
   banknotes = (banknotes ?? DEFAULT_BANKNOTES).sort((nA, nB) => nB - nA)
 
   return Object.freeze({
-    info: banknotes.map((banknote) => {
-      const quantity = Math.floor(cash / banknote)
-      cash -= quantity * banknote
-      return { banknote, quantity, type: Number.isInteger(banknote) ? "note" : "coin" }
+    info: banknotes.map((note) => {
+      const quantity = Math.floor(cash / note)
+      cash -= quantity * note
+      return { note, quantity, type: Number.isInteger(note) ? "note" : "coin" } satisfies NoteDetails
     })
   })
 }
@@ -37,8 +44,13 @@ function main(): void {
   console.log(input)
   console.log(
     info
-      .map(({ banknote, quantity }) => {
-        return format("%d nota(s) de %s", quantity, cashFormatter.format(banknote))
+      .map((detail) => {
+        return format(
+          "%d %s(s) de %s",
+          detail.quantity,
+          detail.type === "note" ? "nota" : "moeda",
+          cashFormatter.format(detail.note)
+        )
       })
       .join(EOL)
   )
