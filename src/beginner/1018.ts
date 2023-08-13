@@ -10,21 +10,27 @@ const input = readFileSync(stdin.fd, { encoding: "ascii" })
 
 type NoteType = "note" | "coin"
 interface NoteDetails {
-  note: number
-  quantity: number
-  type: NoteType
+  cash: number
+  remaining: number
+  info: Array<{
+    note: number
+    quantity: number
+    type: NoteType
+  }>
 }
 
-function getFewestNotesSequence(cash: number, banknotes?: Array<number>): Readonly<{ info: Array<NoteDetails> }> {
+function getFewestNotesSequence(cash: number, banknotes?: Array<number>): Readonly<NoteDetails> {
   const DEFAULT_BANKNOTES = [200, 100, 50, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1, 0.05, 0.01]
   banknotes = (banknotes ?? DEFAULT_BANKNOTES).sort((nA, nB) => nB - nA)
 
   return Object.freeze({
+    cash,
     info: banknotes.map((note) => {
       const quantity = Math.floor(cash / note)
       cash -= quantity * note
-      return { note, quantity, type: Number.isInteger(note) ? "note" : "coin" } satisfies NoteDetails
-    })
+      return { note, quantity, type: Number.isInteger(note) ? "note" : "coin" as NoteType }
+    }),
+    remaining: cash
   })
 }
 
