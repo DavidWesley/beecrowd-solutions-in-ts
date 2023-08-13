@@ -8,6 +8,11 @@ const input = readFileSync(stdin.fd, { encoding: "ascii" })
   .map((value) => Number.parseInt(value, 10))
   .at(0) as number
 
+const Float = (num: number | string, precision: number): number => {
+  if (typeof num === "string") return Float(Number.parseFloat(num), precision)
+  else return Number.parseFloat(num.toFixed(precision))
+}
+
 type NoteType = "note" | "coin"
 interface NoteDetails {
   cash: number
@@ -27,7 +32,7 @@ function getFewestNotesSequence(cash: number, banknotes?: Array<number>): Readon
     cash,
     info: banknotes.map((note) => {
       const quantity = Math.floor(cash / note)
-      cash -= quantity * note
+      cash = Float(cash - quantity * note, 2)
       return { note, quantity, type: Number.isInteger(note) ? "note" : "coin" as NoteType }
     }),
     remaining: cash
