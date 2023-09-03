@@ -10,7 +10,7 @@ const [N, ...input] = readFileSync(stdin.fd, { encoding: "utf8" }).split(EOL, 1e
  * Applies a series of operators to a value in a pipeline.
  *
  * @param {Array<operator<T>>} operators - An array of operators to apply to the value.
- * @returns {operator<T>} - The result of applying all the operators to the value.
+ * @returns {operator<T>} - A combined functions which apply all the operators to the value.
  */
 const pipe =
   <T>(...operators: Array<operator<T>>): operator<T> =>
