@@ -5,7 +5,7 @@
   "private": "true",
   "type": "module",
   "scripts": {
-    "test": "",
+    "test": "npx tsx --test ./test/**/*.test.ts",
     "lint": "eslint",
     "lint:fix": "eslint . --ext .js,.ts --fix",
     "lint:all": "eslint src --ext .js,.ts --max-warnings=0 --fix",
