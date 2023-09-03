@@ -3,6 +3,8 @@
   "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
     "allowSyntheticDefaultImports": false,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "lib": [
       "ESNext",
       "DOM"
@@ -11,11 +13,14 @@
     "allowJs": false,
     "checkJs": false,
     "target": "ESNext",
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "removeComments": false,
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "include": [
-    "src/"
-  ],
+  "include": ["src/", "util/", "test/"],
   "exclude": [
     "node_modules/*"
   ]

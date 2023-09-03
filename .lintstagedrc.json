@@ -1,5 +1,8 @@
 {
-  "./src/**/*.{js,ts}": [
+  "./{src,util}/**/*.{js,ts}": [
     "npm run lint:fix"
+  ],
+  "./test/**/*.{js,ts}": [
+    "npm run test"
   ]
 }
