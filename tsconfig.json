@@ -20,7 +20,7 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["src/", "util/", "test/"],
+  "include": ["src/", "utils", "test/"],
   "exclude": [
     "node_modules/*"
   ]

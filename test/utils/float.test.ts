@@ -1,7 +1,7 @@
 import * as assert from "node:assert"
 import { describe, it } from "node:test"
 
-import { Float } from "@/util/float.ts"
+import { Float } from "@/utils/float.ts"
 
 describe("Float", () => {
   it("should convert a number to a floating-point number with the specified precision", () => {
