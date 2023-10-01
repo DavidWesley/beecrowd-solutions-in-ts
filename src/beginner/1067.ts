@@ -1,0 +1,17 @@
+import { readFileSync } from "node:fs"
+import { EOL } from "node:os"
+import { stdin } from "node:process"
+
+const input = readFileSync(stdin.fd, { encoding: "ascii" })
+  .split(EOL, 1)
+  .map((value) => Number.parseInt(value, 10))
+  .at(0) as number
+
+function main(): void {
+  const output = []
+  for (let n = 1; n <= input; n += 2) output.push(n)
+
+  console.log(output.join(EOL))
+}
+
+main()
