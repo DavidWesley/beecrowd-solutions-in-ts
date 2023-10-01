@@ -22,8 +22,8 @@ const counter = <T>(fn: (arg0: T) => boolean) => {
   }
 }
 
-const isOdd = (value: number): boolean => value % 2 === 1
-const isEven = (value: number): boolean => value % 2 === 0
+const isOdd = (value: number): boolean => Math.abs(value % 2) === 1
+const isEven = (value: number): boolean => Math.abs(value % 2) === 0
 const isPositive = (value: number): boolean => value > 0
 const isNegative = (value: number): boolean => value < 0
 

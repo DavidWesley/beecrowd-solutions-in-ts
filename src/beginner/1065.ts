@@ -22,7 +22,7 @@ const counter = <T>(fn: (arg0: T) => boolean) => {
   }
 }
 
-const isEven = (value: number): boolean => value % 2 === 0
+const isEven = (value: number): boolean => Math.abs(value % 2) === 0
 const evenNumbersCounter = counter(isEven)
 
 function main(): void {

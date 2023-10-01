@@ -7,7 +7,7 @@ const input = readFileSync(stdin.fd, { encoding: "ascii" })
   .map((value) => Number.parseInt(value, 10))
   .at(0)!
 
-const isOdd = (value: number): boolean => value % 2 === 1
+const isOdd = (value: number): boolean => Math.abs(value % 2) === 1
 
 function main(): void {
   const output = []
