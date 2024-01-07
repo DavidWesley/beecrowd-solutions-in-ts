@@ -5,11 +5,8 @@
     "allowSyntheticDefaultImports": false,
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
-    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "module": "NodeNext",
     "allowJs": false,
     "checkJs": false,
     "target": "ESNext",
@@ -21,7 +18,5 @@
     }
   },
   "include": ["src/", "utils", "test/"],
-  "exclude": [
-    "node_modules/*"
-  ]
+  "exclude": ["node_modules/*"]
 }

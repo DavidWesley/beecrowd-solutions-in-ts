@@ -9,8 +9,8 @@
 	],
 	"typescript.tsdk": "node_modules/typescript/lib",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true,
+	"source.fixAll.eslint": "explicit",
+	"source.organizeImports": "explicit"
 },
 "cSpell.language": "en,pt,pt-BR",
 "cSpell.enabled": true,
