@@ -1,7 +1,6 @@
 {
   "./{src,util}/**/*.{js,ts}": [
-    "npm run lint",
-    "npm run format"
+    "biome check --staged --write"
   ],
   "./test/**/*.{js,ts}": [
     "npm run test"
