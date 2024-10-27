@@ -6,9 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "tsx --test ./test/**/*.test.ts",
-    "lint": "eslint",
-    "lint:fix": "eslint . --ext .js,.ts --fix",
-    "lint:all": "eslint src --ext .js,.ts --max-warnings=0 --fix",
+    "lint": "biome lint ./src --diagnostic-level=error",
+    "format": "biome format ./src --write --diagnostic-level=warn",
     "prepare": "husky install"
   },
   "author": {
@@ -36,14 +35,12 @@
     "node": ">=18"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@tsconfig/strictest": "^2.0.1",
     "@types/node": "^20.4.10",
-    "@typescript-eslint/eslint-plugin": "^6.2.0",
-    "@typescript-eslint/parser": "^6.2.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.46.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.10",
     "tsx": "^4.7.0",

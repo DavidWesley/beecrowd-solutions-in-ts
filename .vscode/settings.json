@@ -2,16 +2,19 @@
 	"cSpell.enableFiletypes": [
 		"!json",
 		"js",
-    "ts"
+		"ts"
 	],
 	"cSpell.words": [
 		"Beecrowd"
 	],
 	"typescript.tsdk": "node_modules/typescript/lib",
-  "editor.codeActionsOnSave": {
-	"source.fixAll.eslint": "explicit",
-	"source.organizeImports": "explicit"
-},
-"cSpell.language": "en,pt,pt-BR",
-"cSpell.enabled": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit"
+	},
+	"cSpell.language": "en,pt,pt-BR",
+	"cSpell.enabled": true,
+	"cSpell.ignoreWords": [
+		"commitlint"
+	],
 }
