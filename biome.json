@@ -24,7 +24,8 @@
                 "noStaticOnlyClass": "off"
             },
             "style": {
-                "noNonNullAssertion": "warn"
+                "noNonNullAssertion": "warn",
+                "useExponentiationOperator": "off"
             }
         }
     },
