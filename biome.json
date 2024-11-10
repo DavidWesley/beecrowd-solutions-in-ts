@@ -25,7 +25,8 @@
             },
             "style": {
                 "noNonNullAssertion": "warn",
-                "useExponentiationOperator": "off"
+                "useExponentiationOperator": "off",
+                "noParameterAssign": "off"
             }
         }
     },
